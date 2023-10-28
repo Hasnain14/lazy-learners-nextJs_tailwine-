@@ -5,6 +5,7 @@ import Card from '../components/card/Card';
 import Footer from '../components/footer/Footer';
 import FrameWorkShow from '../components/frameWorkShow/FrameWorkShow';
 
+
 const About = () => {
 
     const services = [
@@ -81,7 +82,7 @@ const About = () => {
                     <h1 className='font-Audiowide font-extrabold text-2xl'>Our Services</h1>
 
                     <div className='flex flex-wrap justify-center gap-3 mt-4 mb-10'>
-                        {services.map(ser => <Card service={ser}></Card>)}
+                        {services.map(ser => <Card service={ser} key = {ser.key}></Card>)}
                     </div>
 
                 </div>
@@ -90,7 +91,7 @@ const About = () => {
             <div className=" p-10 bg-base-200 text-base-content rounded mb-10">
                 <h1 className='text-center font-cursive font-bold text-2xl pb-6'>This Website is Built With....</h1>
                 <div className='flex justify-center items-center gap-10'>
-                    {frameWork.map(fw => <FrameWorkShow frameWork = {fw}></FrameWorkShow>)}
+                    {frameWork.map(fw => <FrameWorkShow frameWork = {fw} key = {fw.key}></FrameWorkShow>)}
                 </div>
             </div>
 

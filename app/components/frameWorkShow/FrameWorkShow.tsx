@@ -1,6 +1,7 @@
 import React from 'react';
+import frameWork from '../../api/types'
 
-const FrameWorkShow = (props) => {
+const FrameWorkShow = (props:frameWork) => {
     return (
         <div className='w-fit text-center'>
             <div className="avatar">

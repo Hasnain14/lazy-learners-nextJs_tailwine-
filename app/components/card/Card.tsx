@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import frameWork from '../../api/types'
 
-const Card = (props) => {
+const Card = (props:frameWork) => {
     return (
         <div>
             <div className="card card-side bg-base-100 shadow-xl">
