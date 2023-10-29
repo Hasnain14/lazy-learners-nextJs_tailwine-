@@ -1,7 +1,7 @@
-import React from 'react';
-import Services from './types'
+import React from "react";
+import {ServicesProps} from "./types"
 
-const Card = (props:Services) => {
+const Card = (props:ServicesProps) => {
     return (
         <div>
             <div className="card card-side bg-base-100 shadow-xl">
