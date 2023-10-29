@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import courseType from '../api/index'
+import { CourseShowProps } from './types'
 
-const CourseShow = (props:courseType) => {
-    const courseData = props.courseData;
+const CourseShow = (props:CourseShowProps) => {
+    const courseData = props;
     return (
         <div>
             <div className="card card-compact w-56 h-96 bg-base-100 shadow-xl">
