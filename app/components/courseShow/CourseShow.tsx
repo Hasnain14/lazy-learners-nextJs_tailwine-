@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import courseType from '../api/index'
 
-const CourseShow = (props) => {
+const CourseShow = (props:courseType) => {
     const courseData = props.courseData;
     return (
         <div>

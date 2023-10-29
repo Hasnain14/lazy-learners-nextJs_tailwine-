@@ -7,6 +7,7 @@ import CourseShow from '../components/courseShow/CourseShow';
 import Data from '../fakeData/fakeData.json';
 
 
+
 const coursePage = () => {
 
     const [courseData, setCourseData] = useState([]);
@@ -40,7 +41,7 @@ const coursePage = () => {
                 <h1 className='text-center font-cursive font-bold text-2xl pb-6'>Find Your Desire Course</h1>
 
                 <div className='flex flex-wrap gap-6 justify-center p-10'>
-                    {courseData.map(cd => <CourseShow courseData={cd}></CourseShow>)}
+                    {courseData.map(cd => <CourseShow courseData={cd} key = {cd.id}></CourseShow>)}
                 </div>
             </div>
 

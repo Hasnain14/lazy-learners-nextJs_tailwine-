@@ -1,5 +1,5 @@
 import React from 'react';
-import frameWork from '../../api/types'
+import frameWork from './types'
 
 const FrameWorkShow = (props:frameWork) => {
     return (
