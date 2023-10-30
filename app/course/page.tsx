@@ -1,29 +1,33 @@
-'use client'
+"use client"
 
-import React, { useState, useEffect } from 'react';
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer';
-import CourseShow from '../components/courseShow/CourseShow';
-import Data from '../fakeData/fakeData.json';
+import React, { useState, useEffect } from "react";
+import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/footer/Footer";
+import CourseShow from "../components/courseShow/CourseShow";
+import Data from "../fakeData/fakeData.json";
 
 
 
-const coursePage = () => {
-
+const CoursePage = () => {
     const [courseData, setCourseData] = useState([]);
 
     useEffect (()=> {
+        // @ts-ignore
         setCourseData(Data)
       },[])
 
+      // @ts-ignore
     const searchCourse = (e) => {
+        
         const searchKey = e.target.value;
             
             if (searchKey === '') {
+                // @ts-ignore
                 setCourseData(Data);
             } else {
                 const filter_data = Data?.filter((course) =>
                 course.course_name.toLowerCase().includes(searchKey.toLowerCase()));
+                // @ts-ignore
                     setCourseData(filter_data);
             }
     }
@@ -41,7 +45,10 @@ const coursePage = () => {
                 <h1 className='text-center font-cursive font-bold text-2xl pb-6'>Find Your Desire Course</h1>
 
                 <div className='flex flex-wrap gap-6 justify-center p-10'>
-                    {courseData.map(cd => <CourseShow courseData={cd} key = {cd.id}></CourseShow>)}
+                    {courseData.map(cd => (
+                        // @ts-ignore
+                    <CourseShow courseData={cd} key = {cd.id}></CourseShow>
+                    ))}
                 </div>
             </div>
 
@@ -51,4 +58,4 @@ const coursePage = () => {
     );
 };
 
-export default coursePage;
+export default CoursePage;

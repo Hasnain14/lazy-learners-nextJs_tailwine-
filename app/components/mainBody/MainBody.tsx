@@ -1,7 +1,7 @@
-import React from 'react';
-import CourseShow from '../courseShow/CourseShow';
-import courseData from '../../fakeData/fakeData.json';
-import Link from 'next/link';
+import React from "react";
+import CourseShow from "../courseShow/CourseShow";
+import courseData from "../../fakeData/fakeData.json";
+import Link from "next/link";
 
 const MainBody = () => {
     const rand = [];
@@ -22,10 +22,10 @@ const MainBody = () => {
             </div>
             <div className='p-10 flex flex-wrap gap-6 justify-center'>
 
-                {rand.map(i => <CourseShow courseData={courseData[i]}></CourseShow>)}
+                {rand.map(i => <CourseShow courseData={courseData[i]} key = {i}></CourseShow>)}
             </div>
             <div className='pb-5 flex justify-center'>
-                <Link href= "\course"><button className="btn btn-primary m-auto h-[1rem]">View All >> </button></Link>
+                <Link href= "\course"><button className="btn btn-primary m-auto h-[1rem]"> View All  </button></Link>
             </div>
         </div>
     );
