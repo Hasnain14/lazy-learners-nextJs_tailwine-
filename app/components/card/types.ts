@@ -1,5 +1,5 @@
 
-export interface ServicesProps{
+export interface CardProps{
   service:Services;
 }
 export interface Services {

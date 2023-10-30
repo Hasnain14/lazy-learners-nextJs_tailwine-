@@ -1,5 +1,5 @@
 
-export interface courseDataProps{
+export interface CourseShowProps{
   courseData:courseType;
 }
 

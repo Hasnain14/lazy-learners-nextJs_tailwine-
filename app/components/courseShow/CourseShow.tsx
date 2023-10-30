@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import {courseDataProps} from './types'
+import {CourseShowProps} from './types'
 
-const CourseShow = (props:courseDataProps) => {
+const CourseShow = (props:CourseShowProps) => {
     const courseData = props.courseData;
     return (
         <div>
